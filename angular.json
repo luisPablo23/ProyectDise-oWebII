@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ReparacionDePcPablo": {
+    "ReparacionesPablo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/reparacion-de-pc-pablo",
+            "outputPath": "dist/reparaciones-pablo",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -33,7 +33,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "/assets"
               }
             ],
             "styles": [
@@ -69,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ReparacionDePcPablo:build:production"
+              "buildTarget": "ReparacionesPablo:build:production"
             },
             "development": {
-              "buildTarget": "ReparacionDePcPablo:build:development"
+              "buildTarget": "ReparacionesPablo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -91,7 +92,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "/assets"
               }
             ],
             "styles": [
